@@ -1,0 +1,37 @@
+header {
+    background-color: #1F2937;
+}
+.header-logo-font-color {
+    color: #F9FAF8;
+    font-size: 24px;
+}
+
+.secondary-font-color {
+    color: #E5E7EB;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+header button {
+    background-color: #3882F6;
+    color: white;
+}
+
+.signup-box {
+    background-color: #3882F6;
+}
+
+h2 {
+    font-size: 36px;
+    color: #1F2937;
+}
+
+#quote-text {
+    font-size: 36px;
+    font-family: light italic;
+    color: #1F2937;
+}

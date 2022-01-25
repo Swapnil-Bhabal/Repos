@@ -1,0 +1,27 @@
+body {
+    background-color: rgba(255,0,0,0.1);
+}
+
+p {
+    font-family: lucida, fantasy;
+}
+
+img {
+    width: 650px;
+    height: auto;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: blanchedalmond;
+    background-color: grey;
+}
+
+h2, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+ul, ol {
+    font-family: lucida, fantasy;
+}
