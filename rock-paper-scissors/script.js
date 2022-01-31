@@ -8,7 +8,6 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
-    
     if (playerSelection === computerSelection) {
         console.log("Its a Tie");
     } else if ((computerSelection === "paper" && playerSelection === "rock") || 
@@ -24,6 +23,7 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
     for (i = 0; i < 5; i++) {
+        const playerSelection = prompt('Whats your call?');
         const computerSelection = computerPlay();
         console.log(`Game ${i+1}`);
         playRound(playerSelection, computerSelection);
@@ -34,5 +34,5 @@ function game() {
         console.log("Yuhooo, you won this one.");
     }
 }
-const playerSelection = prompt('Whats your call?');
+// const playerSelection = prompt('Whats your call?');
 console.log(game());
