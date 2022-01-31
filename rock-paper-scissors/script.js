@@ -25,6 +25,7 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     for (i = 0; i < 5; i++) {
         const computerSelection = computerPlay();
+        console.log(`Game ${i+1}`);
         playRound(playerSelection, computerSelection);
     }
     if (computerWinCounter > playerWinCounter) {
