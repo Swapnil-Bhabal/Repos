@@ -1,5 +1,12 @@
+let computerSelection;
+let playerSelection;
 let computerWinCounter = 0;
 let playerWinCounter = 0;
+let roundWinner = ''
+
+let buttons = document.querySelectorAll('button');
+const headerDiv = document.querySelector('#header');
+const resultsDiv = document.querySelector('#results');
 
 function computerPlay() {
     const computersTurn = ["rock", "paper", "scissor"];
@@ -9,30 +16,49 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     if (playerSelection === computerSelection) {
-        console.log("Its a Tie");
+        roundWinner = "Tie";
     } else if ((computerSelection === "paper" && playerSelection === "rock") || 
             (computerSelection === "scissor" && playerSelection === "paper") || 
             (computerSelection === "rock" && playerSelection === "scissor")) {
-                console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
-                computerWinCounter++;
+                roundWinner = "Loose";
+                computerWinCounter++;      
             } else {
-                console.log(`You win! ${playerSelection} beats ${computerSelection}`);  
+                roundWinner = "Win";
                 playerWinCounter++;
             }
 }
 
 function game() {
-    for (i = 0; i < 5; i++) {
-        const playerSelection = prompt('Whats your call?');
-        const computerSelection = computerPlay();
-        console.log(`Game ${i+1}`);
-        playRound(playerSelection, computerSelection);
-    }
-    if (computerWinCounter > playerWinCounter) {
-        console.log("Computer wins the game");
-    } else {
-        console.log("Yuhooo, you won this one.");
-    }
+        if (computerWinCounter > playerWinCounter) {
+            headerDiv.innerText = "Computer wins the game";
+        } else {
+            headerDiv.innerText = "Yuhooo, you won this one.";
+        }
 }
-// const playerSelection = prompt('Whats your call?');
-console.log(game());
+
+buttons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        playerSelection = btn.innerText.toLowerCase();
+        computerSelection = computerPlay();
+        if ((computerWinCounter || playerWinCounter) === 5) {
+            game();        
+        } else {
+            headerDiv.innerText = `Score Board : Player = ${playerWinCounter}  Computer = ${computerWinCounter}`;
+            playRound(playerSelection, computerSelection);
+            winnerOfRound();
+        }
+    })
+})
+
+
+function winnerOfRound() {
+    if (roundWinner === "Tie") {
+        resultsDiv.innerText = "Its a tie";
+    } else if (roundWinner === "Loose") {
+        resultsDiv.innerText = `You lose! ${computerSelection} beats ${playerSelection}`;
+    } else {
+        resultsDiv.innerText = `You win! ${playerSelection} beats ${computerSelection}`;
+    }
+}  
+
+

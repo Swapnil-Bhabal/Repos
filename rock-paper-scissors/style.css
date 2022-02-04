@@ -1,0 +1,19 @@
+div {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    background-color: bisque;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 200px 0;
+}
+
+button {
+    padding: 50px;
+    background-color:coral;
+}
