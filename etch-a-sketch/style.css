@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container {
+    display: grid;
+    width: 50vw;
+    height: 50vh;
+    border: 2px solid black;
+}
+
+.grid-element {
+    
+}
