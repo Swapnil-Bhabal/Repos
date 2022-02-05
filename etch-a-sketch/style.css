@@ -1,16 +1,19 @@
 body {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 50px;
     
 }
 .container {
+    
     display: grid;
     width: 50vw;
     height: 50vh;
     border: 2px solid black;
 }
 
-.grid-element {
-    
+.headContent {
+    display: flex;
+    gap: 20px;
 }

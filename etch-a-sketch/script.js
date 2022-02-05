@@ -1,24 +1,37 @@
 const container = document.querySelector('.container');
 const resetButton = document.querySelector('.reset');
+const size = document.getElementById('size').value;
+const newBox = document.querySelector('input');
 
-function makeGrid(rows, columns) {
-    container.style.gridTemplateColumns = `repeat(${rows}, 1fr)`;
-    container.style.gridTemplateRows = `repeat(${columns}, 1fr)`;
-    for (let i = 0; i < rows * columns; i++) {
+function makeGrid(size) {
+    container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+    for (let i = 0; i < size * size; i++) {
         const boxes = document.createElement('div');
         boxes.classList.add("grid-element");
-        boxes.addEventListener('mouseover', (event) => {
+        boxes.addEventListener('mouseover', () => {
                 boxes.style.backgroundColor = "black";
-            }) 
+            })
+        
         container.appendChild(boxes);
     }
 }
 
-resetButton.onclick = () => {
-    container.innerHTML = "";
+function clearGrid() {
+    resetButton.onclick = (e) => {
+        container.innerHTML = "";
+    }
 }
 
 
+makeGrid(size)
+ 
+newBox.addEventListener('change', () => {
+    const size = document.getElementById('size').value;
+    makeGrid(size);
+    clearGrid();
+})
 
 
-makeGrid(16, 16)
+
+
