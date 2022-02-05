@@ -17,10 +17,17 @@ function makeGrid(size) {
     }
 }
 
-function clearGrid() {
-    resetButton.onclick = (e) => {
-        container.innerHTML = "";
+
+resetButton.onclick = (e) => {
+    container.innerHTML = "";
+    let size = prompt("Please enter the size of grid which you desire")
+    if (size === "") {
+        const size = document.getElementById('size').value;
+        makeGrid(size);
+    } else {
+        makeGrid(size)
     }
+    
 }
 
 
