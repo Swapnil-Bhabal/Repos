@@ -17,16 +17,23 @@ body {
     gap: 2em;
     background-color: beige;
     align-items: center;
+    font-size: 1.2em;
 }
 
 .headContent label {
     font-weight: 600;
+    
 }
 
 button {
-    padding: 0.5em;
-    border-radius: 0.5em;
+    padding: 0.6em;
+    border-radius: 0.6em;
     border: 1px solid black;
     background-color: bisque;
-    
+    font-size: 0.8em;
+}
+
+button:hover {
+    color: azure;
+    cursor: pointer;
 }
