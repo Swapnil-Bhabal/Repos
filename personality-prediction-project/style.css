@@ -87,9 +87,12 @@ main form {
 
 .panel {
     display: flex;
-    padding-left: 9rem;
+    padding-left: 8.5rem;
     gap: 9rem;
     justify-content: space-between;
+    background-color:goldenrod;
+    font-size: 1.6rem;
+    
 }
 
 .first-question-page form div{
@@ -99,8 +102,12 @@ main form {
 
 .question label {
     padding-right: 3rem;
+    font-size: 2rem;
 }
 
+.question input {
+    
+}
 
 
 
