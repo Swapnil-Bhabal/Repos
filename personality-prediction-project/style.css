@@ -1,8 +1,8 @@
-body {
+/* body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+} */
 
 nav {
    padding: 1rem;
@@ -19,11 +19,8 @@ ul li {
     flex: 1;
 }
 
-.about {
-   
-}
 
-main {
+.index-page{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,4 +29,17 @@ main {
     text-align: center;
     gap: 1.5rem;
 }
+
+.information-page { 
+    display: flex;
+    padding: 5rem 0rem 0rem 2rem;
+}
+
+main form { 
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
 
