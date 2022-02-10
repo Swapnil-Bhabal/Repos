@@ -48,6 +48,11 @@ main form {
     gap: 1rem;
 }
 
+.first-question-page button {
+    width: 4rem;
+    height: 2rem;
+}
+
 
 
 
