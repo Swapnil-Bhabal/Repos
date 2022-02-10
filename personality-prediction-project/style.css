@@ -6,6 +6,8 @@
 
 nav {
    padding: 1rem;
+   background-color: aqua;
+   font-size: 1.2rem;
 }
 ul {
     display: flex;
@@ -19,6 +21,34 @@ ul li {
     flex: 1;
 }
 
+.button {
+    font: bold 1.5rem Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 0.6rem;
+    border: 1px solid aqua;
+    border-radius: 0.4rem;
+}
+
+.button:hover {
+    color: white;
+    background-color: black;
+}
+
+li a {
+    text-decoration: none;
+    color: #333333; 
+}
+
+.home a:hover, .work a:hover, .about a:hover {
+    color: white;
+}
+
+.personality-pred {
+    font-size: 5rem;
+    font-weight: 600;
+}
 
 .index-page{
     display: flex;
@@ -26,7 +56,6 @@ ul li {
     align-items: center;
     justify-content: center;
     padding: 25rem;
-    text-align: center;
     gap: 1.5rem;
 }
 
