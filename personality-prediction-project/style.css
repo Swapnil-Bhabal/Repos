@@ -30,7 +30,7 @@ ul li {
     gap: 1.5rem;
 }
 
-.information-page { 
+.information-page, .first-question-page { 
     display: flex;
     padding: 5rem 0rem 0rem 2rem;
 }
