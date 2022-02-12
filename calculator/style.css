@@ -1,0 +1,30 @@
+main {
+    /* width: 50rem;
+    height: 50rem; */
+    display: flex;
+    justify-content: center;
+    margin: 20rem;
+}
+
+.calculator-box {
+    display: flex;
+    align-items: center;
+}
+
+.all-buttons {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 0.42rem;
+}
+
+.clear {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.delete {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
