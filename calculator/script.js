@@ -1,3 +1,28 @@
+const DEFAULT_DISPLAY_VALUE = 0;
+
+
+let currentDisplayValue = DEFAULT_DISPLAY_VALUE;
+
+const pressedButtonValue = document.querySelectorAll('button');
+const displayResult = document.querySelector('.display-result');
+const displayExpression = document.querySelector('display-expression');
+
+function setDefaultResult(event) {
+    if (event.innerText === '' || 0) {
+        event.innerText = currentDisplayValue;
+    } else {
+        event.addEventListener('click', function() {
+            displayResult.innerText = this.innerText
+         });
+    }
+}
+
+setDefaultResult(displayResult);
+
+function setDisplayResult() {
+    displayResult.innerText = event.innerText;
+}
+
 function add (a, b) {
     return a + b;
 }
@@ -25,6 +50,11 @@ function operator(operator, num1, num2) {
         return divide(num1, num2);
     }
 }
+
+pressedButtonValue.forEach(button => {
+    button.addEventListener('click',setDefaultResult(button));
+})
+
 
 
 

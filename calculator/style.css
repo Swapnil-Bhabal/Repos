@@ -1,14 +1,17 @@
 main {
-    /* width: 50rem;
-    height: 50rem; */
     display: flex;
     justify-content: center;
-    margin: 20rem;
+    margin: 30vh;
+    
 }
 
 .calculator-box {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+    border: 1px solid black;
+    padding: 0.5rem;
 }
 
 .all-buttons {
