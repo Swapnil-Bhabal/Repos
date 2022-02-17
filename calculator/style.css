@@ -47,5 +47,6 @@ button {
     background-color: aquamarine;
     font-size: xx-large;
     padding: 1rem 0rem 1rem 0rem;
+    border-radius: 0.5rem;
 }
 
