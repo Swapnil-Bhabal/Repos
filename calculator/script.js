@@ -60,9 +60,9 @@ function resetValues() {
 }
 
 function setOperator(e) {
-    currentOperator = e.target.textContent;
-    displayResult.innerText = currentOperator;
-    displayExpression.innerText += currentOperator;
+        currentOperator = e.target.textContent;
+        displayResult.innerText = currentOperator;
+        displayExpression.innerText += currentOperator;
 }
 
 function setNumber(e) {
@@ -72,21 +72,33 @@ function setNumber(e) {
         displayExpression.innerText = operand1;
         
     } else {
-        operand2 += e.target.textContent;
-        displayResult.innerText = operand2;
-        displayExpression.innerText += operand2;
+        if (currentResult !== '') {
+            operand2 = '';
+            operand2 += e.target.textContent;
+            displayExpression.innerText = '';
+            // displayResult.innerText = '';
+            displayExpression.innerText = displayResult.innerText;
+            displayExpression.innerText += currentOperator;
+            displayExpression.innerText += operand2;
+        } else {
+            operand2 += e.target.textContent;
+            displayResult.innerText = operand2;
+            displayExpression.innerText += e.target.textContent ;
+        }   
     }
 }
 
 function operation() {
     currentResult = operator(currentOperator, operand1, operand2); 
     displayResult.innerText = currentResult;
-     
 }
 
 
 numbers.forEach(number => number.addEventListener('click', (e) => {
     setNumber(e);
+    if (currentResult !== '') {
+        displayResult.innerText = '';
+    }
 }));
 
 
@@ -94,13 +106,16 @@ operators.forEach(operator => operator.addEventListener('click', (e) => {
     setOperator(e);
     if (currentResult !== '') {
         operand1 = currentResult
-        displayExpression.innerText = operand1;
+        // displayExpression.innerText = operand1;
+        
+        // operand2 = '';
+        operation();
+        displayExpression.innerText = ''
+        displayExpression.innerText += currentResult;
         displayExpression.innerText += currentOperator;
-        operand2 = '';
+    } else if(currentOperator && operand1 && operand2 !== '') {
         operation();
-    } else {
-        operand2 = '';
-        operation();
+        // operand2 = '';
     }
 }));
 
