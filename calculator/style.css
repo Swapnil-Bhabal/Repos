@@ -9,16 +9,18 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 0.5rem;
+    gap: 0.7rem;
     border: 1px solid black;
+    border-radius: 1rem;
     padding: 0.5rem;
+    background-color: beige;
 }
 
 .all-buttons {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr ;
-    gap: 0.42rem;
+    gap: 0.7rem;
 }
 
 .clear {
@@ -29,5 +31,21 @@ main {
 .delete {
     grid-column-start: 3;
     grid-column-end: 5;
+}
+
+button {
+    color: black;
+    background-color: aqua;
+    border-radius: 0.5rem;
+    font-size: xx-large;
+    padding: 1rem;
+}
+
+.display-result, .display-expression {
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+    font-size: xx-large;
+    padding: 1rem 0rem 1rem 0rem;
 }
 

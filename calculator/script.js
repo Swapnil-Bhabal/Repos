@@ -42,7 +42,7 @@ const clearButton = document.querySelector('.clear');
 const equalButton = document.querySelector('.equal');
 const operators = document.querySelectorAll('.operator');
 const numbers = document.querySelectorAll('.number');
-
+const deleteButton = document.querySelector('.delete');
 
 function clearAll() {
     displayResult.innerText = '';
@@ -126,3 +126,5 @@ equalButton.addEventListener('click', (e) => {
 });
 
 clearButton.addEventListener('click', clearAll);
+
+deleteButton.addEventListener('click', clearAll);
