@@ -1,0 +1,132 @@
+@font-face {
+    font-family: NorseBold;
+    src: url("path/Norse-Bold.otf") format("opentype");
+}
+
+:root {
+    --logo: 50%;
+}
+html {
+    font-size: 1rem;
+}
+
+#full-page {
+    display: flex;
+    height: 100vh;
+}
+
+.logo {
+    background-image: url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80);
+    color: white;
+    width: var(--logo);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+img {
+    width: 50%;
+    height: 100%;
+}
+
+.panel-logo {
+    display: flex;
+    align-items: center;
+    font-family: NorseBold;
+    font-size: 6em;
+    margin-top: 50%;
+    padding: 0rem 20%;
+    background-color: rgba(0,0,0, 0.5);
+}
+
+footer {
+    align-self: center;
+    margin-bottom: 1rem;
+}
+
+
+/* Form part */
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 100px 100px 40px 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgba(0,0,0, 0.7);
+    background-color: rgba(0,0,0, 0.05);
+}
+
+#ldt {
+    margin: 2rem 0;
+}
+
+/* main form section part */
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0 1rem 2rem;
+
+}
+
+input, label {
+    display: flex;
+}
+
+#form-title {
+    font-family: sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: rgba(0,0,0, 0.7);
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: rgba(0,0,0, 0.7);
+}
+
+/* section below form */
+
+button {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgba(3, 110, 3, 1);
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    color: azure;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0 0 3rem;
+    gap: 2rem;
+    background-color: rgba(0,0,0, 0.05);
+}
+
+section > p {
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(3, 110, 3, 1);
+}
+
+
+
