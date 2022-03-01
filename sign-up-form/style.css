@@ -96,6 +96,11 @@ form {
     color: rgba(0,0,0, 0.7);
 }
 
+input {
+    width: 250px;
+    height: 25px;
+}
+
 /* section below form */
 
 button {
